@@ -681,7 +681,7 @@ export const editorStyles = html`
       width: 1.3rem;
       height: 1.3rem;
       top: -1px;
-      background: url('assets/icons/check-lg.svg') no-repeat center, white;
+      background: url('./assets/icons/check-lg.svg') no-repeat center, white;
       background-size: 1rem;
     }
 
@@ -700,7 +700,7 @@ export const editorStyles = html`
       width: 1.3rem;
       height: 1.3rem;
       top: -1px;
-      background: url('assets/icons/plus-minus.svg') no-repeat center, white;
+      background: url('./assets/icons/plus-minus.svg') no-repeat center, white;
       background-size: 0.8rem;
       margin-right: 1.2px;
     }
@@ -720,7 +720,7 @@ export const editorStyles = html`
       width: 1.3rem;
       height: 1.3rem;
       top: -1px;
-      background: url('assets/icons/x.svg') no-repeat center, white;
+      background: url('./assets/icons/x.svg') no-repeat center, white;
       background-size: 1rem;
     }
 
