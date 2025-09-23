@@ -22,13 +22,14 @@
     "editor de texto articulado"
   ],
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "scripts": {
     "start": "rimraf out-tsc && npm run build && npm run copy:quill1table && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "start:cache": "rimraf out-tsc && npm run build && npm run copy:quill1table && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds --cache\"",
     "build": "tsc",
     "clean": "rimraf out-tsc && rimraf prod",
+    "prepare": "npm run prepublish && npm run copy:assets",
     "prepublish": "rimraf dist && rollup -c rollup.config.dist.js",
     "copy:assets": "cp -r ./assets ./dist/assets || xcopy assets dist\\assets /E /I /Y",
     "copy:quill1table": "cp -r ./src/assets/js ./out-tsc/src/assets/js || xcopy .\\src\\assets\\js .\\out-tsc\\src\\assets\\js /E /I /Y",
