@@ -39,6 +39,7 @@ export { AutoriaComponent } from './components/autoria/autoria.component';
 export { DestinoComponent } from './components/destino/destino.component';
 export { LexmlAutocomplete } from './components/lexml-autocomplete';
 export { DataComponent } from './components/data/data.component';
+export { LexmlEmendaCmbhComponent } from './components/lexml-emenda-cmbh.component';
 export { LexmlEmendaComponent, LexmlEmendaParametrosEdicao } from './components/lexml-emenda.component';
 export { LexmlEmendaConfig } from './model/lexmlEmendaConfig';
 export { AlertasComponent } from './components/alertas/alertas.component';

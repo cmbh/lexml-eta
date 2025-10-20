@@ -3,7 +3,8 @@ import { LexmlEmendaConfig } from './../../src/model/lexmlEmendaConfig';
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, query, state } from 'lit/decorators.js';
 import '../../src';
-import { LexmlEmendaComponent, LexmlEmendaParametrosEdicao } from '../../src/components/lexml-emenda.component';
+import { LexmlEmendaCmbhComponent } from '../../src/components/lexml-emenda-cmbh.component';
+import { LexmlEmendaParametrosEdicao } from '../../src/components/lexml-emenda.component';
 import { RefProposicaoEmendada } from '../../src/model/emenda/emenda';
 import { COD_CIVIL_COMPLETO } from '../doc/codigocivil_completo';
 import { COD_CIVIL_PARCIAL1 } from '../doc/codigocivil_parcial1';
@@ -112,8 +113,8 @@ export class DemoView extends LitElement {
   @query('#projetoNorma')
   private elDocumento!: HTMLSelectElement;
 
-  @query('lexml-emenda')
-  private elLexmlEmenda!: LexmlEmendaComponent;
+  @query('lexml-emenda-cmbh')
+  private elLexmlEmenda!: LexmlEmendaCmbhComponent;
 
   @query('lexml-emenda-comando')
   private elLexmlEmendaComando!: ComandoEmendaComponent;
@@ -129,6 +130,7 @@ export class DemoView extends LitElement {
     super();
     this.emendaConfig = new LexmlEmendaConfig();
     this.emendaConfig.urlComissoes = 'https://run.mocky.io/v3/fee83f1d-e204-4746-adf6-c0f617156a6a';
+    this.emendaConfig.habilitarRevisao = false;
   }
 
   createRenderRoot(): LitElement {
@@ -452,7 +454,7 @@ export class DemoView extends LitElement {
         </div>
       </div>
       <div class="nome-proposicao">${this.proposicaoCorrente.sigla ? `${this.proposicaoCorrente.sigla} ${this.proposicaoCorrente.numero}/${this.proposicaoCorrente.ano}` : ''}</div>
-      <lexml-emenda .lexmlEmendaConfig=${this.emendaConfig} modo=${this.modo} @onrevisao=${this.onRevisao} @onchange=${() => console.log('chegou evento')}></lexml-emenda>
+      <lexml-emenda-cmbh .lexmlEmendaConfig=${this.emendaConfig} modo=${this.modo} @onrevisao=${this.onRevisao} @onchange=${() => console.log('chegou evento')}></lexml-emenda-cmbh>
     `;
   }
 

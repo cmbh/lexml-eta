@@ -7,7 +7,7 @@ import { rootStore } from '../../redux/store';
 import { Alerta } from '../../model/alerta/alerta';
 import { limparAlertas } from '../../model/alerta/acao/limparAlertas';
 import { removerAlerta } from '../../model/alerta/acao/removerAlerta';
-import { LexmlEmendaComponent } from '../lexml-emenda.component';
+import { LexmlEmendaCmbhComponent } from '../lexml-emenda-cmbh.component';
 import SlBadge from '@shoelace-style/shoelace/dist/components/badge/badge';
 import { TipoMensagem } from '../../model/lexml/util/mensagem';
 
@@ -83,7 +83,7 @@ export class AlertasComponent extends connect(rootStore)(LitElement) {
           this.removeAlertaById((event.target as Element).id);
         });
       });
-      const lexmlEmenda = document.querySelector('lexml-emenda') as LexmlEmendaComponent;
+      const lexmlEmenda = document.querySelector('lexml-emenda-cmbh') as LexmlEmendaCmbhComponent;
       lexmlEmenda.totalAlertas = this.alertas.length;
       const oldValue = changedProperties.get('alertas')?.length || 0;
 

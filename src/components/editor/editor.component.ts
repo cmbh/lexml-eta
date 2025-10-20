@@ -261,13 +261,17 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
 
           <span id="pos-select-paginacao"></span>
 
-          <lexml-switch-revisao
-          class="revisao-container"
-          .nomeSwitch="${this._idSwitchRevisao}"
-          .nomeBadgeQuantidadeRevisao="${this._idBadgeQuantidadeRevisao}"
-          modo="${this.modo}"
-          >
-          </lexml-switch-revisao>
+          ${
+            this.lexmlEtaConfig.habilitarRevisao
+              ? html`<lexml-switch-revisao
+                  class="revisao-container"
+                  .nomeSwitch="${this._idSwitchRevisao}"
+                  .nomeBadgeQuantidadeRevisao="${this._idBadgeQuantidadeRevisao}"
+                  modo="${this.modo}"
+                >
+                </lexml-switch-revisao>`
+              : ''
+          }
 
           ${this.exibirBotoesParaTratarTodas ? this.renderBotoesParaTratarTodasRevisoes() : ''}
 

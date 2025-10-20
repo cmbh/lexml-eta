@@ -48,6 +48,7 @@ const CLASS_BUTTON_REJEITAR_REVISAO = 'rejeitar-revisao';
 @customElement('editor-texto-rico')
 export class EditorTextoRicoComponent extends connect(rootStore)(LitElement) {
   @property({ type: String }) texto = '';
+  @property({ type: Boolean }) habilitarRevisao = true;
   @property({ type: Array }) anexos: Anexo[] = [];
   @property({ type: Array }) notasRodape: NotaRodape[] = [];
   @property({ type: String, attribute: 'registro-evento' }) registroEvento = '';
@@ -168,24 +169,25 @@ export class EditorTextoRicoComponent extends connect(rootStore)(LitElement) {
   render(): TemplateResult {
     return html`
       ${quillTableCss} ${editorTextoRicoCss} ${notaRodapeCss} ${this.modo === Modo.TEXTO_LIVRE ? this.renderBotaoAnexo() : ''}
+      ${this.habilitarRevisao
+        ? html`<div class="panel-revisao">
+            <lexml-switch-revisao
+              id="lexml-switch-revisao-component"
+              modo="${this.modo}"
+              class="revisao-container"
+              .nomeSwitch="${this.getNomeSwitch()}"
+              .nomeBadgeQuantidadeRevisao="${this.getNomeBadge()}"
+            >
+            </lexml-switch-revisao>
 
-      <div class="panel-revisao">
-        <lexml-switch-revisao
-          id="lexml-switch-revisao-component"
-          modo="${this.modo}"
-          class="revisao-container"
-          .nomeSwitch="${this.getNomeSwitch()}"
-          .nomeBadgeQuantidadeRevisao="${this.getNomeBadge()}"
-        >
-        </lexml-switch-revisao>
-
-        <sl-button class="aceitar-revisao" variant="default" size="small" title="Aceitar revisões" @click=${(): void => this.aceitarRevisoes()} disabled circle>
-          <sl-icon name="check-lg"></sl-icon>
-        </sl-button>
-        <sl-button class="rejeitar-revisao" variant="default" size="small" title="Rejeitar revisões" @click=${(): void => this.rejeitarRevisoes()} disabled circle>
-          <sl-icon name="x"></sl-icon>
-        </sl-button>
-      </div>
+            <sl-button class="aceitar-revisao" variant="default" size="small" title="Aceitar revisões" @click=${(): void => this.aceitarRevisoes()} disabled circle>
+              <sl-icon name="check-lg"></sl-icon>
+            </sl-button>
+            <sl-button class="rejeitar-revisao" variant="default" size="small" title="Rejeitar revisões" @click=${(): void => this.rejeitarRevisoes()} disabled circle>
+              <sl-icon name="x"></sl-icon>
+            </sl-button>
+          </div>`
+        : ''}
       <div id="${this.id}-inner" class="editor-texto-rico" @onTableInTable=${this.onTableInTable}></div>
       <lexml-alterar-largura-tabela-coluna-modal id="lexml-alterar-largura-tabela-modal" tipo="tabela"></lexml-alterar-largura-tabela-coluna-modal>
       <lexml-alterar-largura-tabela-coluna-modal id="lexml-alterar-largura-coluna-modal" tipo="coluna"></lexml-alterar-largura-tabela-coluna-modal>
@@ -510,8 +512,10 @@ export class EditorTextoRicoComponent extends connect(rootStore)(LitElement) {
       toolbarContainer.appendChild(elAnexo);
     }
 
-    elRevisao.parentNode!.removeChild(elRevisao);
-    toolbarContainer.appendChild(elRevisao);
+    if (elRevisao !== null) {
+      elRevisao.parentNode!.removeChild(elRevisao);
+      toolbarContainer.appendChild(elRevisao);
+    }
   };
 
   configureTooltip = (): void => {
