@@ -106,7 +106,7 @@ export class DestinoComponent extends LitElement {
   render(): TemplateResult {
     return html`
       <style>
-        fieldset {
+        fieldset.lexml-destino {
           display: flex;
           flex-direction: column;
           gap: 1em;
@@ -119,7 +119,7 @@ export class DestinoComponent extends LitElement {
           max-width: 655px;
         }
 
-        legend {
+        .lexml-destino legend {
           background-color: var(--sl-color-gray-200);
           font-weight: bold;
           border-radius: 5px;
@@ -128,7 +128,7 @@ export class DestinoComponent extends LitElement {
           box-shadow: var(--sl-shadow-small);
         }
 
-        .mensagem {
+        .lexml-destino .mensagem {
           font-size: 0.8em;
           font-weight: normal;
           text-align: left;
@@ -140,7 +140,7 @@ export class DestinoComponent extends LitElement {
           font-family: var(--sl-font-sans);
         }
 
-        .mensagem--danger {
+        .lexml-destino .mensagem--danger {
           color: #721c24;
           background-color: #f8d7da;
           border-color: #f5c6cb;

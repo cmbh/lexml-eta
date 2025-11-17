@@ -483,7 +483,7 @@ export const editorStyles = html`
       display: none;
     }
 
-    .mensagem {
+    .ql-container .mensagem {
       font-family: var(--sl-font-sans);
       font-size: 0.8em;
       font-weight: normal;
@@ -494,30 +494,30 @@ export const editorStyles = html`
       border-radius: 2px;
     }
 
-    .mensagem--success {
+    .ql-container .mensagem--success {
       color: #155724;
       background-color: #d4edda;
       border-color: #c3e6cb;
     }
 
-    .mensagem--info {
+    .ql-container .mensagem--info {
       color: #0c5460;
       background-color: #d1ecf1;
       border-color: #bee5eb;
     }
 
-    .mensagem--warning {
+    .ql-container .mensagem--warning {
       color: #856404;
       background-color: #fff3cd;
       border-color: #ffeeba;
     }
 
-    .mensagem--danger {
+    .ql-container .mensagem--danger {
       color: #721c24;
       background-color: #f8d7da;
       border-color: #f5c6cb;
     }
-    .mensagem__fix {
+    .ql-container .mensagem__fix {
       color: blue;
       text-decoration: underline;
       cursor: pointer;

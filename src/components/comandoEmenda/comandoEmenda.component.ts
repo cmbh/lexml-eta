@@ -136,7 +136,7 @@ export class ComandoEmendaComponent extends connect(rootStore)(LitElement) {
           white-space: nowrap;
         }
 
-        .mensagem {
+        .lexml-emenda-comando .mensagem {
           font-size: 0.8em;
           font-weight: normal;
           text-align: left;
@@ -147,12 +147,12 @@ export class ComandoEmendaComponent extends connect(rootStore)(LitElement) {
           border-radius: 2px;
           font-family: var(--sl-font-sans);
         }
-        .mensagem--warning {
+        .lexml-emenda-comando .mensagem--warning {
           color: #856404;
           background-color: #fff3cd;
           border-color: #ffeeba;
         }
-        .mensagem--danger {
+        .lexml-emenda-comando .mensagem--danger {
           color: #721c24;
           background-color: #f8d7da;
           border-color: #f5c6cb;
