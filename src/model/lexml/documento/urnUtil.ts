@@ -43,7 +43,16 @@ export const getSigla = (urn: string): string => {
 
 export const getTipo = (urn: string): any => {
   const dadosURN = _parseURN(urn);
-  return VOCABULARIO.tiposDocumento.find(t => t.urn === dadosURN.tipo);
+  const tipo = VOCABULARIO.tiposDocumento.find(t => t.urn === dadosURN.tipo);
+  if (tipo) {
+    return tipo;
+  } else {
+    return {
+      urn: dadosURN.tipo,
+      descricao: dadosURN.tipo,
+      genero: 'M',
+    };
+  }
 };
 
 export const getNumero = (urn: string): string => {
