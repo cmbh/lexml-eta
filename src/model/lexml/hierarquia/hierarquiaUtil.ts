@@ -216,16 +216,16 @@ export const getDispositivoPosteriorNaSequenciaDeLeitura = (disp: Dispositivo, a
 */
 
 export const getDispositivoPosteriorNaSequenciaDeLeitura = (disp: Dispositivo, accept?: (d: Dispositivo) => boolean, aPartirDe?: Dispositivo): Dispositivo | undefined => {
-  //console.log(`getDispositivoPosteriorNaSequenciaDeLeitura(${disp.id}, x, ${aPartirDe?.id})`);
+  // console.log(`getDispositivoPosteriorNaSequenciaDeLeitura(${disp.id}, x, ${aPartirDe?.id})`);
   if (!disp) {
     return undefined;
   }
   let current: Dispositivo | undefined = disp;
   let proximo: Dispositivo | undefined = undefined;
-  while(current) {
-    //console.log(`${current?.id}, ${aPartirDe?.id}`);
+  while (current) {
+    // console.log(`${current?.id}, ${aPartirDe?.id}`);
     if (aPartirDe) {
-      if(isArticulacaoAlteracao(aPartirDe)) {
+      if (isArticulacaoAlteracao(aPartirDe)) {
         proximo = getIrmaoPosteriorIndependenteDeTipo(aPartirDe.pai!);
       } else {
         proximo = getIrmaoPosteriorIndependenteDeTipo(aPartirDe);
@@ -236,18 +236,18 @@ export const getDispositivoPosteriorNaSequenciaDeLeitura = (disp: Dispositivo, a
         proximo = filhos[0];
       }
     }
-    if (!proximo && current?.hasAlteracao() && current.alteracoes?.filhos.length) {
+    if (!proximo && !aPartirDe && current?.hasAlteracao() && current.alteracoes?.filhos.length) {
       proximo = current.alteracoes.filhos[0];
     }
-    if(proximo) {
-      if(!accept || accept(proximo)) {
-        //console.log(`retornou ${proximo.id}`);
+    if (proximo) {
+      if (!accept || accept(proximo)) {
+        // console.log(`retornou ${proximo.id}`);
         return proximo;
       }
       aPartirDe = undefined;
       current = proximo;
       proximo = undefined;
-    } else if(!isDispositivoRaiz(current)) {
+    } else if (!isDispositivoRaiz(current)) {
       aPartirDe = current;
       current = current.pai;
       proximo = undefined;
@@ -255,7 +255,7 @@ export const getDispositivoPosteriorNaSequenciaDeLeitura = (disp: Dispositivo, a
       break;
     }
   }
-  //console.log(`retornou undefined`);
+  // console.log(`retornou undefined`);
   return undefined;
 };
 
