@@ -40,6 +40,7 @@ import { MPV_1170_2023 } from '../doc/mpv_1170_2023';
 import { MPV_1232_2024 } from '../doc/mpv_1232_2024';
 import { MPV_1170_2023_ALTERADA } from '../doc/mpv_1170_2023_alterada';
 import { PL_4_2025 } from '../doc/pl_4_2025';
+import { PL_428_2025 } from '../doc/pl_428_2025';
 
 const mapProjetosNormas = {
   mpv_885_2019: MPV_885_2019,
@@ -75,6 +76,7 @@ const mapProjetosNormas = {
   _plp_68_2024_3: PLP_68_2024_3,
   _mpv_905_2019: MPV_905_2019,
   _pl_4_2025: PL_4_2025,
+  pl_428_2025: PL_428_2025,
 };
 
 const mapDispositivosBloqueados = {

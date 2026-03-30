@@ -1,0 +1,1460 @@
+export const PL_428_2025 = {
+  name: {
+    namespaceURI: 'http://www.lexml.gov.br/1.0',
+    localPart: 'LexML',
+    prefix: '',
+    key: '{http://www.lexml.gov.br/1.0}LexML',
+    string: '{http://www.lexml.gov.br/1.0}LexML',
+  },
+  value: {
+    TYPE_NAME: 'br_gov_lexml__1.LexML',
+    metadado: {
+      TYPE_NAME: 'br_gov_lexml__1.Metadado',
+      identificacao: {
+        TYPE_NAME: 'br_gov_lexml__1.Identificacao',
+        urn: 'urn:lex:br:minas.gerais:belo.horizonte:projeto.lei:2025;428',
+      },
+    },
+    projetoNorma: {
+      TYPE_NAME: 'br_gov_lexml__1.ProjetoNorma',
+      norma: {
+        TYPE_NAME: 'br_gov_lexml__1.HierarchicalStructure',
+        parteInicial: {
+          TYPE_NAME: 'br_gov_lexml__1.ParteInicial',
+          epigrafe: {
+            TYPE_NAME: 'br_gov_lexml__1.GenInline',
+            id: 'epigrafe',
+            content: ['Projeto de Lei nº 428/2025'],
+          },
+          ementa: {
+            TYPE_NAME: 'br_gov_lexml__1.GenInline',
+            content: [
+              'Altera a ',
+              {
+                name: {
+                  namespaceURI: 'http://www.lexml.gov.br/1.0',
+                  localPart: 'span',
+                  prefix: '',
+                  key: '{http://www.lexml.gov.br/1.0}span',
+                  string: '{http://www.lexml.gov.br/1.0}span',
+                },
+                value: {
+                  TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                  href: 'urn:lex:br:minas.gerais:belo.horizonte:lei:2020;11216',
+                  content: ['Lei nº 11.216, de 4 de fevereiro de 2020'],
+                },
+              },
+              ', que Dispõe sobre a aplicação dos instrumentos de política urbana previstos nos Capítulos II, III e IV do Título II da ',
+              {
+                name: {
+                  namespaceURI: 'http://www.lexml.gov.br/1.0',
+                  localPart: 'span',
+                  prefix: '',
+                  key: '{http://www.lexml.gov.br/1.0}span',
+                  string: '{http://www.lexml.gov.br/1.0}span',
+                },
+                value: {
+                  TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                  href: 'urn:lex:br:minas.gerais:belo.horizonte:lei:2019;11181',
+                  content: ['Lei nº 11.181, de 8 de agosto de 2019'],
+                },
+              },
+              ', que aprova o Plano Diretor do Município de Belo Horizonte..',
+            ],
+          },
+        },
+        articulacao: {
+          TYPE_NAME: 'br_gov_lexml__1.Articulacao',
+          lXhier: [
+            {
+              name: {
+                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                localPart: 'Artigo',
+                prefix: '',
+                key: '{http://www.lexml.gov.br/1.0}Artigo',
+                string: '{http://www.lexml.gov.br/1.0}Artigo',
+              },
+              value: {
+                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                id: 'art1',
+                rotulo: 'Art. 1º',
+                lXcontainersOmissis: [
+                  {
+                    name: {
+                      namespaceURI: 'http://www.lexml.gov.br/1.0',
+                      localPart: 'Caput',
+                      prefix: '',
+                      key: '{http://www.lexml.gov.br/1.0}Caput',
+                      string: '{http://www.lexml.gov.br/1.0}Caput',
+                    },
+                    value: {
+                      TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                      id: 'art1_cpt',
+                      p: [
+                        {
+                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                          content: [
+                            'A ',
+                            {
+                              name: {
+                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                localPart: 'span',
+                                prefix: '',
+                                key: '{http://www.lexml.gov.br/1.0}span',
+                                string: '{http://www.lexml.gov.br/1.0}span',
+                              },
+                              value: {
+                                TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                href: 'urn:lex:br:minas.gerais:belo.horizonte:lei:2020;11216',
+                                content: ['Lei nº 11.216, de 4 de fevereiro de 2020'],
+                              },
+                            },
+                            ', passa a vigorar acrescida do seguinte Capítulo II-A e respectivos arts. 6º-A, 6º-B, 6º-C e 6º-D:',
+                          ],
+                        },
+                      ],
+                      alteracao: {
+                        TYPE_NAME: 'br_gov_lexml__1.Alteracao',
+                        id: 'art1_cpt_alt1',
+                        base: 'urn:lex:br:minas.gerais:belo.horizonte:lei:2020;11216',
+                        content: [
+                          {
+                            name: {
+                              namespaceURI: 'http://www.lexml.gov.br/1.0',
+                              localPart: 'Capitulo',
+                              prefix: '',
+                              key: '{http://www.lexml.gov.br/1.0}Capitulo',
+                              string: '{http://www.lexml.gov.br/1.0}Capitulo',
+                            },
+                            value: {
+                              TYPE_NAME: 'br_gov_lexml__1.Hierarchy',
+                              id: 'art1_cpt_alt1_cap1',
+                              rotulo: 'CAPÍTULO II-A',
+                              lXhier: [
+                                {
+                                  name: {
+                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                    localPart: 'p',
+                                    prefix: '',
+                                    key: '{http://www.lexml.gov.br/1.0}p',
+                                    string: '{http://www.lexml.gov.br/1.0}p',
+                                  },
+                                  value: {
+                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                    content: ['DA DESAPROPRIAÇÃO URBANÍSTICA'],
+                                  },
+                                },
+                                {
+                                  name: {
+                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                    localPart: 'Artigo',
+                                    prefix: '',
+                                    key: '{http://www.lexml.gov.br/1.0}Artigo',
+                                    string: '{http://www.lexml.gov.br/1.0}Artigo',
+                                  },
+                                  value: {
+                                    TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                    id: 'art1_cpt_alt1_cap1_art1',
+                                    rotulo: 'Art. 6º-A',
+                                    lXcontainersOmissis: [
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Caput',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Caput',
+                                          string: '{http://www.lexml.gov.br/1.0}Caput',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art1_cpt',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: ['A desapropriação urbanística destina-se a:'],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art1_inc1',
+                                          rotulo: 'I',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'executar plano urbanístico previamente aprovado pelo Município, na forma da alínea i do art. 5º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:brasil:uniao:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei federal nº 3.365, de 21 de junho de 1941'],
+                                                  },
+                                                },
+                                                ', e do art. 44 da ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:brasil:uniao:lei:1979;6766',
+                                                    content: ['Lei federal nº 6.766, de 19 de dezembro de 1979'],
+                                                  },
+                                                },
+                                                ';',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art1_inc2',
+                                          rotulo: 'II',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'viabilizar a captura da valorização imobiliária gerada por plano urbanístico, por meio da desapropriação de área contígua, na forma do art. 4º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:brasil:uniao:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei federal nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                ';',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art1_inc3',
+                                          rotulo: 'III',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'promover a regularização fundiária de interesse social, na forma do inciso VI do art. 15 da ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:brasil:uniao:lei:2017;13465',
+                                                    content: ['Lei federal nº 13.465, de 11 de julho de 2017'],
+                                                  },
+                                                },
+                                                ', e do inciso IV do art. 2º da ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:brasil:uniao:lei:1962;4132',
+                                                    content: ['Lei federal nº 4.132, de 10 de setembro de 1962'],
+                                                  },
+                                                },
+                                                ';',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art1_inc4',
+                                          rotulo: 'IV',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'promover a conservação, preservação, reparação ou restauração de monumentos históricos e artísticos, de bens tombados ou protegidos por seu valor cultural, na forma da alínea k do art. 5º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:minas.gerais:belo.horizonte:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                ', e do § 1º do art. 19 do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:minas.gerais:belo.horizonte:decreto-lei:1937;25',
+                                                    content: ['Decreto-Lei nº 25, de 30 de novembro de 1937'],
+                                                  },
+                                                },
+                                                ';',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art1_inc5',
+                                          rotulo: 'V',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'prevenir danos à segurança das pessoas e do patrimônio gerados por edifícios que ameacem ruína, na forma da alínea c do art. 5º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:minas.gerais:belo.horizonte:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                ';',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art1_inc6',
+                                          rotulo: 'VI',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'ampliar a oferta de imóveis destinados a programas habitacionais de interesse social, na forma da alínea e do art. 5º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:minas.gerais:belo.horizonte:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                '.',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                                {
+                                  name: {
+                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                    localPart: 'Artigo',
+                                    prefix: '',
+                                    key: '{http://www.lexml.gov.br/1.0}Artigo',
+                                    string: '{http://www.lexml.gov.br/1.0}Artigo',
+                                  },
+                                  value: {
+                                    TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                    id: 'art1_cpt_alt1_cap1_art2',
+                                    rotulo: 'Art. 6º-B',
+                                    lXcontainersOmissis: [
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Caput',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Caput',
+                                          string: '{http://www.lexml.gov.br/1.0}Caput',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art2_cpt',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'Na hipótese de desapropriação urbanística executada por particular que receber delegação para tanto, na forma do art. 3º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:minas.gerais:belo.horizonte:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                ', será observado o seguinte:',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art2_inc1',
+                                          rotulo: 'I',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: ['a desapropriação será precedida de decreto de utilidade pública ou de interesse social;'],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art2_inc2',
+                                          rotulo: 'II',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: ['o contrato poderá atribuir ao delegatário liberdade para negociar o valor da indenização;'],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art2_inc3',
+                                          rotulo: 'III',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'será oferecida ao proprietário opção de arbitragem, nos termos do art. 10-B do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:minas.gerais:belo.horizonte:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                ';',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Inciso',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                          string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art2_inc4',
+                                          rotulo: 'IV',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: ['as unidades produzidas poderão ser negociadas livremente.'],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                                {
+                                  name: {
+                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                    localPart: 'Artigo',
+                                    prefix: '',
+                                    key: '{http://www.lexml.gov.br/1.0}Artigo',
+                                    string: '{http://www.lexml.gov.br/1.0}Artigo',
+                                  },
+                                  value: {
+                                    TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                    id: 'art1_cpt_alt1_cap1_art3',
+                                    rotulo: 'Art. 6º-C',
+                                    lXcontainersOmissis: [
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Caput',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Caput',
+                                          string: '{http://www.lexml.gov.br/1.0}Caput',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art3_cpt',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'A receita decorrente de venda ou exploração imobiliária dos imóveis desapropriados poderá compor a remuneração do agente executor, garantido ao poder público responsável pela contratação, no mínimo, o ressarcimento dos desembolsos com indenizações, quando essas ficarem sob sua responsabilidade, conforme dispõe o parágrafo único do art. 4º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:minas.gerais:belo.horizonte:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                '.',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Paragrafo',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                          string: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art3_par1',
+                                          rotulo: 'Parágrafo único',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: ['O Município poderá considerar agente executor:'],
+                                            },
+                                          ],
+                                          lXcontainersOmissis: [
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art3_par1_inc1',
+                                                rotulo: 'I',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'concessionários, permissionários, autorizatários e arrendatários federais, estaduais e municipais, nos termos do inciso I do art. 3º do ',
+                                                      {
+                                                        name: {
+                                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                          localPart: 'span',
+                                                          prefix: '',
+                                                          key: '{http://www.lexml.gov.br/1.0}span',
+                                                          string: '{http://www.lexml.gov.br/1.0}span',
+                                                        },
+                                                        value: {
+                                                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                          href: 'urn:lex:br:brasil:uniao:decreto-lei:1941;3365',
+                                                          content: ['Decreto-Lei federal nº 3.365, de 1941'],
+                                                        },
+                                                      },
+                                                      ';',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art3_par1_inc2',
+                                                rotulo: 'II',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'operadores ferroviários ou sociedades de propósito específico criados, nos termos dos arts. 61 e 62 da ',
+                                                      {
+                                                        name: {
+                                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                          localPart: 'span',
+                                                          prefix: '',
+                                                          key: '{http://www.lexml.gov.br/1.0}span',
+                                                          string: '{http://www.lexml.gov.br/1.0}span',
+                                                        },
+                                                        value: {
+                                                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                          href: 'urn:lex:br:brasil:uniao:lei:2021;14273',
+                                                          content: ['Lei federal nº 14.273, de 23 de dezembro de 2021'],
+                                                        },
+                                                      },
+                                                      ';',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art3_par1_inc3',
+                                                rotulo: 'III',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'requerente legitimado que seja pessoa jurídica previamente credenciada ou autorizada pelo Município para realização de regularização fundiária nos termos do § 1º do art. 14 da ',
+                                                      {
+                                                        name: {
+                                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                          localPart: 'span',
+                                                          prefix: '',
+                                                          key: '{http://www.lexml.gov.br/1.0}span',
+                                                          string: '{http://www.lexml.gov.br/1.0}span',
+                                                        },
+                                                        value: {
+                                                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                          href: 'urn:lex:br:brasil:uniao:lei:2017;13465',
+                                                          content: ['Lei federal nº 13.465, de 2017'],
+                                                        },
+                                                      },
+                                                      '.',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                                {
+                                  name: {
+                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                    localPart: 'Artigo',
+                                    prefix: '',
+                                    key: '{http://www.lexml.gov.br/1.0}Artigo',
+                                    string: '{http://www.lexml.gov.br/1.0}Artigo',
+                                  },
+                                  value: {
+                                    TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                    id: 'art1_cpt_alt1_cap1_art4',
+                                    rotulo: 'Art. 6º-D',
+                                    lXcontainersOmissis: [
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Caput',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Caput',
+                                          string: '{http://www.lexml.gov.br/1.0}Caput',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art4_cpt',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'Se o imóvel objeto da declaração de utilidade pública for destinado à venda, o Município poderá optar por promover a desapropriação por meio de hasta pública.',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Paragrafo',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                          string: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art4_par1',
+                                          rotulo: '§ 1º',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'Sem prejuízo de outras hipóteses previstas em lei, podem ser destinados à venda os bens cuja desapropriação tenha as seguintes finalidades:',
+                                              ],
+                                            },
+                                          ],
+                                          lXcontainersOmissis: [
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par1_inc1',
+                                                rotulo: 'I',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'alcançar mudança ou melhoria urbanística cuja implementação pelo proprietário tenha sido por ele recusada ou se mostre fática ou juridicamente inviável, inclusive em razão de fragmentação fundiária;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par1_inc2',
+                                                rotulo: 'II',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'viabilizar a implementação mais célere do aproveitamento compulsório do bem, na forma do art. 2º desta lei e do art. 5º da ',
+                                                      {
+                                                        name: {
+                                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                          localPart: 'span',
+                                                          prefix: '',
+                                                          key: '{http://www.lexml.gov.br/1.0}span',
+                                                          string: '{http://www.lexml.gov.br/1.0}span',
+                                                        },
+                                                        value: {
+                                                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                          href: 'urn:lex:br:brasil:uniao:lei:2001;10257',
+                                                          content: ['Lei federal nº 10.257, de 2001'],
+                                                        },
+                                                      },
+                                                      ';',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par1_inc3',
+                                                rotulo: 'III',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: ['possibilitar a conservação, reparação ou restauração de bem tombado ou protegido por seu valor cultural;'],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par1_inc4',
+                                                rotulo: 'IV',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'possibilitar reparos que evitem ou minimizem riscos à segurança das pessoas e do patrimônio gerados por edifícios que ameacem ruína;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par1_inc5',
+                                                rotulo: 'V',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: ['implementar programas habitacionais de interesse social.'],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Paragrafo',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                          string: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art4_par2',
+                                          rotulo: '§ 2º',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: ['O edital da hasta pública conterá, no mínimo, as seguintes disposições:'],
+                                            },
+                                          ],
+                                          lXcontainersOmissis: [
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc1',
+                                                rotulo: 'I',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: ['vedação de lances de valor inferior ao da avaliação administrativa do bem;'],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc2',
+                                                rotulo: 'II',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'obrigação do arrematante de promover o aproveitamento do imóvel em termos e prazos compatíveis com a situação que motivou a declaração de utilidade pública;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc3',
+                                                rotulo: 'III',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: ['o valor da multa a ser aplicada pelo descumprimento da obrigação prevista no inciso II;'],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc4',
+                                                rotulo: 'IV',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'obrigatoriedade de realização de pagamento à vista e em dinheiro através de depósito em conta corrente vinculada ao negócio, na forma dos §§ 1º e 2º do art. 7º-A da ',
+                                                      {
+                                                        name: {
+                                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                          localPart: 'span',
+                                                          prefix: '',
+                                                          key: '{http://www.lexml.gov.br/1.0}span',
+                                                          string: '{http://www.lexml.gov.br/1.0}span',
+                                                        },
+                                                        value: {
+                                                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                          href: 'urn:lex:br:brasil:uniao:lei:1994;8935',
+                                                          content: ['Lei federal nº 8.935, de 18 de novembro de 1994'],
+                                                        },
+                                                      },
+                                                      ', com a finalidade de utilização do valor para pagamento da desapropriação judicial;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc5',
+                                                rotulo: 'V',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'obrigatoriedade de contratação pelo arrematante de seguro garantia ou fiança bancária para pagamento de eventual diferença entre o valor da avaliação administrativa do imóvel e o valor fixado em processo judicial expropriatório;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc6',
+                                                rotulo: 'VI',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'registro da existência e quantificação de débitos do expropriado com o Município ou suas autarquias, que serão abatidos do valor que será transferido aos expropriados, para pagamento à Administração Pública Municipal das importâncias devidas;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc7',
+                                                rotulo: 'VII',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'previsão de instituição de hipoteca sobre o imóvel, em favor da entidade pública expropriante, como garantia real do cumprimento das obrigações previstas neste parágrafo;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc8',
+                                                rotulo: 'VIII',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'previsão de que a avaliação administrativa do imóvel, a que se refere o inciso I, constituirá o valor do imóvel para fins do disposto no art. 1.484 da ',
+                                                      {
+                                                        name: {
+                                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                          localPart: 'span',
+                                                          prefix: '',
+                                                          key: '{http://www.lexml.gov.br/1.0}span',
+                                                          string: '{http://www.lexml.gov.br/1.0}span',
+                                                        },
+                                                        value: {
+                                                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                          href: 'urn:lex:br:brasil:uniao:lei:2002;10406',
+                                                          content: ['Lei federal nº 10.406, de 10 de janeiro de 2002'],
+                                                        },
+                                                      },
+                                                      ', ainda que o lance vencedor da hasta pública tenha sido superior;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par2_inc9',
+                                                rotulo: 'IX',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'exigência de que os proponentes declarem ciência de que a propriedade do imóvel somente será adquirida no âmbito do processo judicial expropriatório.',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Paragrafo',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                          string: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art4_par3',
+                                          rotulo: '§ 3º',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'Concluída a hasta pública, o arrematante e o Município firmarão escritura pública de promessa de compra e venda do imóvel e dos direitos de imissão na posse obtidos no processo judicial expropriatório, da qual constará:',
+                                              ],
+                                            },
+                                          ],
+                                          lXcontainersOmissis: [
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par3_inc1',
+                                                rotulo: 'I',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'cláusula expressa com as obrigações do arrematante de promover as intervenções no bem previstas no plano urbanístico;',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par3_inc2',
+                                                rotulo: 'II',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: ['previsão da conta vinculada a que se refere o inciso IV do § 2º;'],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                            {
+                                              name: {
+                                                namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                localPart: 'Inciso',
+                                                prefix: '',
+                                                key: '{http://www.lexml.gov.br/1.0}Inciso',
+                                                string: '{http://www.lexml.gov.br/1.0}Inciso',
+                                              },
+                                              value: {
+                                                TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                                id: 'art1_cpt_alt1_cap1_art4_par3_inc3',
+                                                rotulo: 'III',
+                                                p: [
+                                                  {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    content: [
+                                                      'cláusula compromissória para solução de eventual litígio entre as partes por meio de arbitragem a ser resolvida por árbitro único designado em comum acordo pelas partes ou, na falta desse, pelo próprio tabelião de notas, na forma do inciso III do art. 7º-A da ',
+                                                      {
+                                                        name: {
+                                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                          localPart: 'span',
+                                                          prefix: '',
+                                                          key: '{http://www.lexml.gov.br/1.0}span',
+                                                          string: '{http://www.lexml.gov.br/1.0}span',
+                                                        },
+                                                        value: {
+                                                          TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                          href: 'urn:lex:br:brasil:uniao:lei:1994;8935',
+                                                          content: ['Lei federal nº 8.935, de 1994'],
+                                                        },
+                                                      },
+                                                      ', em procedimento administrado por instituição escolhida de comum acordo pelas partes ou, na falta desse, por qualquer câmara arbitral credenciada pela Advocacia-Geral da União ou pela Advocacia-Geral do Estado de Minas Gerais, à escolha da parte que solicitar a instauração da arbitragem.',
+                                                    ],
+                                                  },
+                                                ],
+                                              },
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Paragrafo',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                          string: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art4_par4',
+                                          rotulo: '§ 4º',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'A hipoteca, prevista nos incisos VII e VIII do § 2º, poderá ser substituída, a critério do Município, por seguro garantia ou fiança bancária.',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Paragrafo',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                          string: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art4_par5',
+                                          rotulo: '§ 5º',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'A escritura pública prevista no § 3º poderá ser substituída pela delegação ao arrematante da atribuição de promoção da desapropriação judicial, na forma do art. 3º do ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:brasil:uniao:decreto-lei:1941;3365',
+                                                    content: ['Decreto-Lei federal nº 3.365, de 1941'],
+                                                  },
+                                                },
+                                                '.',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Paragrafo',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                          string: '{http://www.lexml.gov.br/1.0}Paragrafo',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art4_par6',
+                                          rotulo: '§ 6º',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: [
+                                                'Exceto na hipótese prevista no inciso II do § 1º, a aplicação da desapropriação por hasta pública não depende da caracterização da situação prevista no art. 2º desta lei e no art. 5º da ',
+                                                {
+                                                  name: {
+                                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                                    localPart: 'span',
+                                                    prefix: '',
+                                                    key: '{http://www.lexml.gov.br/1.0}span',
+                                                    string: '{http://www.lexml.gov.br/1.0}span',
+                                                  },
+                                                  value: {
+                                                    TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                                    href: 'urn:lex:br:brasil:uniao:lei:2001;10257',
+                                                    content: ['Lei federal nº 10.257, de 2001'],
+                                                  },
+                                                },
+                                                '.',
+                                              ],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                                {
+                                  name: {
+                                    namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                    localPart: 'Artigo',
+                                    prefix: '',
+                                    key: '{http://www.lexml.gov.br/1.0}Artigo',
+                                    string: '{http://www.lexml.gov.br/1.0}Artigo',
+                                  },
+                                  value: {
+                                    TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                    id: 'art1_cpt_alt1_cap1_art5',
+                                    rotulo: 'Art. 2º',
+                                    lXcontainersOmissis: [
+                                      {
+                                        name: {
+                                          namespaceURI: 'http://www.lexml.gov.br/1.0',
+                                          localPart: 'Caput',
+                                          prefix: '',
+                                          key: '{http://www.lexml.gov.br/1.0}Caput',
+                                          string: '{http://www.lexml.gov.br/1.0}Caput',
+                                        },
+                                        value: {
+                                          TYPE_NAME: 'br_gov_lexml__1.DispositivoType',
+                                          id: 'art1_cpt_alt1_cap1_art5_cpt',
+                                          p: [
+                                            {
+                                              TYPE_NAME: 'br_gov_lexml__1.GenInline',
+                                              content: ['Esta lei entra em vigor na data de sua publicação.'],
+                                            },
+                                          ],
+                                        },
+                                      },
+                                    ],
+                                  },
+                                },
+                              ],
+                            },
+                          },
+                        ],
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      },
+    },
+  },
+};
