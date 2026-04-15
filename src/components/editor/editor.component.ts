@@ -206,10 +206,10 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
       </style>
       <div id="lx-eta-box">
         <div id="lx-eta-barra-ferramenta">
-          <button class="ql-bold" title="Negrito (Ctrl+b)"></button>
-          <button class="ql-italic" title="Itálico (Ctrl+i)"></button>
-          <button class="ql-script" value="sub" title="Subscrito"></button>
-          <button class="ql-script" value="super" title="Sobrescrito"></button>
+          <button type="button" class="ql-bold" title="Negrito (Ctrl+b)"></button>
+          <button type="button" class="ql-italic" title="Itálico (Ctrl+i)"></button>
+          <button type="button" class="ql-script" value="sub" title="Subscrito"></button>
+          <button type="button" class="ql-script" value="super" title="Sobrescrito"></button>
           <button type="button" class="ql-clean" title="Remover formatação">
             <svg class="" viewBox="0 0 18 18">
               <line class="ql-stroke" x1="5" x2="13" y1="3" y2="3"></line>
@@ -220,14 +220,14 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
             </svg>
           </button>
 
-          <button @click=${this.onClickUndo} class="lx-eta-ql-button lx-eta-btn-desfazer" title="Desfazer (Ctrl+Z)">
+          <button @click=${this.onClickUndo} type="button" class="lx-eta-ql-button lx-eta-btn-desfazer" title="Desfazer (Ctrl+Z)">
             <svg class="icon-undo-redo" id="undo" viewBox="0 0 512 512">
               <path
                 d="M488,256c0,123.4-100.5,223.9-223.9,223.9c-48.8,0-95.2-15.6-134.2-44.9c-14.1-10.6-17-30.7-6.4-44.8 c10.6-14.1,30.6-16.9,44.8-6.4c27.8,20.9,61,31.9,95.9,31.9c88.1,0,159.8-71.7,159.8-159.8S352.3,96.2,264.2,96.2 c-37.5,0-73.1,13.5-101.3,36.6L208,178c17,17,5,46.1-19.1,46.1H43.2c-10.6,0-19.2-8.6-19.2-19.2V59C24,35,53.1,23,70.1,40l47.6,47.6 c40.2-34.9,91.8-55.5,146.4-55.5C387.5,32.1,488,132.6,488,256z"
               />
             </svg>
           </button>
-          <button @click=${this.onClickRedo} class="lx-eta-ql-button" title="Refazer (Ctrl+y)">
+          <button @click=${this.onClickRedo} type="button" class="lx-eta-ql-button" title="Refazer (Ctrl+y)">
             <svg class="icon-undo-redo lx-eta-rebate-180-graus" id="redo" viewBox="0 0 512 512">
               <path
                 d="M488,256c0,123.4-100.5,223.9-223.9,223.9c-48.8,0-95.2-15.6-134.2-44.9c-14.1-10.6-17-30.7-6.4-44.8 c10.6-14.1,30.6-16.9,44.8-6.4c27.8,20.9,61,31.9,95.9,31.9c88.1,0,159.8-71.7,159.8-159.8S352.3,96.2,264.2,96.2 c-37.5,0-73.1,13.5-101.3,36.6L208,178c17,17,5,46.1-19.1,46.1H43.2c-10.6,0-19.2-8.6-19.2-19.2V59C24,35,53.1,23,70.1,40l47.6,47.6 c40.2-34.9,91.8-55.5,146.4-55.5C387.5,32.1,488,132.6,488,256z"
@@ -277,15 +277,15 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
 
           <input type="button" @click=${this.artigoOndeCouber} class="${'ql-hidden'} btn--artigoOndeCouber" value="Propor artigo onde couber" title="Artigo onde couber"></input>
           <div class="mobile-buttons">
-            <button class="mobile-button btn-comando" title="Comando" @click=${this.showComandoEmendaModal}>
+            <button type="button" class="mobile-button btn-comando" title="Comando" @click=${this.showComandoEmendaModal}>
               <sl-icon name="code"></sl-icon>
               <span>Comando</span>
             </button>
-            <button class="mobile-button btn-dicas" title="Dicas" @click=${this.showAjudaModal}>
+            <button type="button" class="mobile-button btn-dicas" title="Dicas" @click=${this.showAjudaModal}>
               <sl-icon name="lightbulb"></sl-icon>
               <span>Dicas</span>
             </button>
-            <button class="mobile-button" title="Atalhos" @click=${this.showAtalhosModal}>
+            <button type="button" class="mobile-button" title="Atalhos" @click=${this.showAtalhosModal}>
               <sl-icon name="keyboard"></sl-icon>
               <span>Atalhos</span>
             </button>
