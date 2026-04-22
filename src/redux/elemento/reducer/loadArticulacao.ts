@@ -6,6 +6,12 @@ import { buscaDispositivoById, getDispositivoAndFilhosAsLista } from '../../../m
 import { State, StateType } from '../../state';
 
 export const load = (articulacao: Articulacao, modo?: string, params?: LexmlEmendaParametrosEdicao): State => {
+  if (params !== undefined) {
+    if (params.dispositivosBloqueados === undefined) {
+      params.dispositivosBloqueados = [];
+    }
+    params.dispositivosBloqueados.push({ lexmlId: 'ementa', bloquearFilhos: false });
+  }
   articulacao = bloqueiaDispositivos(articulacao, params);
   const elementos = getElementos(articulacao);
 

@@ -311,11 +311,15 @@ export const validaTextoDispositivo = (dispositivo: Dispositivo): Mensagem[] => 
   }
 
   if (isBloqueado(dispositivo) && !isBloqueado(dispositivo.pai!)) {
-    addMensagem(
-      mensagens,
-      TipoMensagem.ERROR,
-      `Dispositivo com estrutura não suportada pelo editor de emendas. Para alterações neste dispositivo, utilize o modo de emenda de texto livre.`
-    );
+    if (dispositivo.tipo === TipoDispositivo.ementa.name) {
+      addMensagem(mensagens, TipoMensagem.INFO, `Para alterar a ementa, é necessário apresentar um substitutivo.`);
+    } else {
+      addMensagem(
+        mensagens,
+        TipoMensagem.ERROR,
+        `Dispositivo com estrutura não suportada pelo editor de emendas. Para alterações neste dispositivo, utilize o modo de emenda de texto livre.`
+      );
+    }
   }
 
   return [...new Set(mensagens)];
