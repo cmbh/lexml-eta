@@ -32,6 +32,7 @@ import {
   transformarIncisoCaputEmParagrafo,
   transformarIncisoParagrafoEmParagrafo,
 } from '../acao/transformarElementoAction';
+import { modificarTermoEmArtigo } from '../acao/modificarParteDeDispositivoAction';
 import { hasIndicativoDesdobramento } from '../conteudo/conteudoUtil';
 import {
   getAgrupadorPosterior,
@@ -64,6 +65,8 @@ export function RegrasArtigo<TBase extends Constructor>(Base: TBase): any {
       if (!isArtigo(dispositivo)) {
         return [];
       }
+
+      acoes.push(modificarTermoEmArtigo);
 
       acoes.push(adicionarElementoAction);
 

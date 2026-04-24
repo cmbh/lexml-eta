@@ -32,6 +32,7 @@ import { VALIDAR_ARTICULACAO } from '../../../model/lexml/acao/validarArticulaca
 import { VALIDAR_ELEMENTO } from '../../../model/lexml/acao/validarElementoAction';
 import { ATUALIZAR_NOTA_ALTERACAO } from './../../../model/lexml/acao/atualizarNotaAlteracaoAction';
 import { REMOVER_ELEMENTO_SEM_TEXTO } from './../../../model/lexml/acao/removerElementoSemTextoAction';
+import { MODIFICAR_PARTE_DE_DISPOSITIVO } from './../../../model/lexml/acao/modificarParteDeDispositivoAction';
 import { abreArticulacao } from './abreArticulacao';
 import { adicionaAlteracaoComAssistente } from './adicionaAlteracaoComAssistente';
 import { adicionaElemento } from './adicionaElemento';
@@ -67,6 +68,7 @@ import { adicionaElementosNaProposicaoFromClipboard } from './adicionaElementosN
 import { ATIVAR_DESATIVAR_REVISAO } from '../../../model/lexml/acao/ativarDesativarRevisaoAction';
 import { ativaDesativaRevisao } from './ativaDesativaRevisao';
 import { atualizaRevisao } from './atualizaRevisao';
+import { modificaParteDeDispositivo } from './modificaParteDeDispositivo';
 import { State, StateType } from '../../state';
 import { ATUALIZAR_USUARIO } from '../../../model/lexml/acao/atualizarUsuarioAction';
 import { atualizaUsuario } from './atualizaUsuario';
@@ -229,6 +231,9 @@ export const elementoReducer = (state = {}, action: any): any => {
       break;
     case LIMPAR_ARTICULACAO:
       tempState = limpaArticulacao(state);
+      break;
+    case MODIFICAR_PARTE_DE_DISPOSITIVO:
+      tempState = modificaParteDeDispositivo(state, action);
       break;
     default:
       actionType = undefined;

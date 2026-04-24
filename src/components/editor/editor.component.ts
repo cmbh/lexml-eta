@@ -79,6 +79,7 @@ import { selecionarPaginaArticulacaoAction } from '../../model/lexml/acao/seleci
 import { navegarEntreElementosAlteradosAction, TDirecao } from '../../model/lexml/acao/navegarEntreElementosAlteradosAction';
 import { emendaDivididaDialog } from './emendaDivididaDialog';
 import { Anexo } from '../../model/emenda/emenda';
+import { modificarParteDeDispositivoDialog } from './modificarParteDeDispositivoDialog';
 
 @customElement('lexml-eta-editor')
 export class EditorComponent extends connect(rootStore)(LitElement) {
@@ -797,6 +798,9 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
           break;
         case StateType.RevisaoAdicionalRejeitada:
           this.removerLinhaQuill(event);
+          break;
+        case StateType.ModificaParteDeDispositivo:
+          modificarParteDeDispositivoDialog(event);
           break;
       }
 

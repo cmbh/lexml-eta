@@ -71,6 +71,7 @@ import { removerTextoOmissisAction } from './removerTextoOmissisAction';
 import { aceitarRevisaoAction } from './aceitarRevisaoAction';
 import { rejeitarRevisaoAction } from './rejeitarRevisaoAction';
 import { exibirDiferencaAction } from './exibirDiferencaAction';
+import { modificarTermoEmArtigo } from './modificarParteDeDispositivoAction';
 
 export interface ElementoAction {
   descricao?: string;
@@ -81,6 +82,7 @@ export interface ElementoAction {
 
 export const acoesMenu: ElementoAction[] = [];
 
+acoesMenu.push(modificarTermoEmArtigo);
 acoesMenu.push(informarNormaAction);
 acoesMenu.push(InformarDadosAssistenteAction);
 acoesMenu.push(considerarElementoExistenteNaNorma);
