@@ -8,9 +8,16 @@ import { DispositivoComparator } from './dispositivo-comparator';
 export abstract class CmdEmdCombinavel {
   constructor(protected dispositivos: Dispositivo[]) {}
 
+  getPrioridade(): number {
+    return 10;
+  }
+
   abstract getTexto(refGenericaProjeto: NomeComGenero, isPrimeiro: boolean, isUltimo: boolean): string;
 
   static compare(c1: CmdEmdCombinavel, c2: CmdEmdCombinavel): number {
+    if (c1.getPrioridade() !== c2.getPrioridade()) {
+      return c1.getPrioridade() - c2.getPrioridade();
+    }
     if (!c1.dispositivos?.length) {
       return 1;
     }

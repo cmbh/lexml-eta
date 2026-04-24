@@ -6,6 +6,7 @@ import { ProjetoNorma } from '../../../src/model/lexml/documento/projetoNorma';
 import { DefaultState, State } from '../../../src/redux/state';
 import { PLC_ARTIGOS_AGRUPADOS } from '../../doc/parser/plc_artigos_agrupados';
 import { TesteCmdEmdUtil } from '../teste-cmd-emd-util';
+import { SubstituicaoTermo } from '../../../src/model/emenda/emenda';
 
 let documento: ProjetoNorma;
 const state: State = new DefaultState();
@@ -71,6 +72,21 @@ describe('Cabeçalho de comando de emenda com adição, modificação e supress�
     TesteCmdEmdUtil.incluiArtigo(state, 'art1', false);
     const itemComandoEmenda = new ComandoEmendaBuilder(documento.urn!, state.articulacao!).getComandoEmenda().comandos[0];
     expect(itemComandoEmenda.cabecalho).to.equal('Acrescente-se art. 1º-1; suprima-se o art. 4º; e dê-se nova redação ao § 7º do art. 9º do Projeto, nos termos a seguir:');
+  });
+
+  it('adicaoSupressaoModificacaoEModificacaoDeTermo', () => {
+    TesteCmdEmdUtil.modificaDispositivo(state, 'art9_par7');
+    TesteCmdEmdUtil.suprimeDispositivo(state, 'art4');
+    TesteCmdEmdUtil.incluiArtigo(state, 'art2', false);
+    const substituicaoTermo = new SubstituicaoTermo();
+    substituicaoTermo.tipo = 'Expressão';
+    substituicaoTermo.termo = 'termo';
+    substituicaoTermo.novoTermo = 'novo termo';
+    TesteCmdEmdUtil.modificaTermoDoDispositivo(state, 'art5', substituicaoTermo);
+    const itemComandoEmenda = new ComandoEmendaBuilder(documento.urn!, state.articulacao!).getComandoEmenda().comandos[0];
+    expect(itemComandoEmenda.cabecalho).to.equal(
+      'Substitua-se no art. 5º a expressão “termo” por “novo termo”; acrescente-se art. 2º-1; suprima-se o art. 4º; e dê-se nova redação ao § 7º do art. 9º do Projeto, nos termos a seguir:'
+    );
   });
 
   it('adicaoModificacao', () => {

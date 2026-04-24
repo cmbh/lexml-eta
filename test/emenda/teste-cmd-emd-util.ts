@@ -15,6 +15,7 @@ import { Tipo, isAgrupadorNaoArticulacao } from './../../src/model/dispositivo/t
 import { adicionarAgrupadorArtigoAction } from './../../src/model/lexml/acao/adicionarAgrupadorArtigoAction';
 import { adicionarArtigoDepois } from './../../src/model/lexml/acao/adicionarElementoAction';
 import { atualizarTextoElementoAction } from './../../src/model/lexml/acao/atualizarTextoElementoAction';
+import { modificarParteDeDispositivo } from '../../src/model/lexml/acao/modificarParteDeDispositivoAction';
 import { SUPRIMIR_ELEMENTO } from './../../src/model/lexml/acao/suprimirElemento';
 import {
   transformaAlineaEmItem,
@@ -28,7 +29,9 @@ import { getDispositivoAnteriorMesmoTipo, getDispositivoPosteriorNaSequenciaDeLe
 import { DispositivoAdicionado } from './../../src/model/lexml/situacao/dispositivoAdicionado';
 import { agrupaElemento } from './../../src/redux/elemento/reducer/agrupaElemento';
 import { atualizaTextoElemento } from './../../src/redux/elemento/reducer/atualizaTextoElemento';
+import { modificaParteDeDispositivo } from './../../src/redux/elemento/reducer/modificaParteDeDispositivo';
 import { suprimeAgrupador } from '../../src/redux/elemento/reducer/suprimeAgrupador';
+import { SubstituicaoTermo } from '../../src/model/emenda/emenda';
 
 export class TesteCmdEmdUtil {
   static readonly URN_LEI = 'urn:lex:br:federal:lei:2006-08-07;11340';
@@ -69,6 +72,15 @@ export class TesteCmdEmdUtil {
     elem.conteudo = { texto: ' <p>Texto</p>' };
     const action = atualizarTextoElementoAction.execute(elem);
     state = atualizaTextoElemento(state, action);
+    return disp!;
+  }
+
+  static modificaTermoDoDispositivo(state: State, id: string, substituicaoTermo: SubstituicaoTermo): Dispositivo {
+    const disp = buscaDispositivoById(state.articulacao!, id);
+    expect(disp, `Dispositivo não encontrado para o id ${id}.`).not.be.undefined;
+    const elem = createElemento(disp!, false);
+    const action = modificarParteDeDispositivo.execute(elem, undefined, undefined, substituicaoTermo);
+    state = modificaParteDeDispositivo(state, action);
     return disp!;
   }
 

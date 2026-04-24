@@ -42,6 +42,9 @@ export class CitacaoComandoDispPrj {
     const ret = new Array<Dispositivo>();
 
     dispositivosEmenda.forEach(d => {
+      if (d.substituicaoTermo !== undefined) {
+        return;
+      }
       if (isArticulacaoAlteracao(d)) {
         // Entram alterações de norma vigente em dispositivos novos,
         if (d.pai!.situacao.descricaoSituacao === DescricaoSituacao.DISPOSITIVO_ADICIONADO) {

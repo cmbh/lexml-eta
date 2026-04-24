@@ -1,24 +1,21 @@
 import { ElementoAction } from '.';
-import { Elemento } from '../../elemento';
-import { Tipo } from '../../dispositivo/tipo';
-import { TipoDispositivo } from '../tipo/tipoDispositivo';
+import { Referencia } from '../../elemento';
+import { SubstituicaoTermo } from '../../emenda/emenda';
 
 export const MODIFICAR_PARTE_DE_DISPOSITIVO = 'MODIFICAR_PARTE_DE_DISPOSITIVO';
 
-export class ModificarParteDeDispositivo implements ElementoAction {
-  descricao: string;
-  tipoDoDispositivo: Tipo;
-  constructor(tipo: Tipo) {
-    this.descricao = `Modificar termo em ${tipo.descricao?.toLowerCase() ?? ''}`;
-    this.tipoDoDispositivo = tipo;
-  }
-  execute(elemento: Elemento): any {
+export class ModificarParteDeDispositivoAction implements ElementoAction {
+  descricao = 'Modificar parte de dispositivo';
+
+  execute(atual: Referencia, _conteudo?: string, _novo?: Referencia, ...outros: any[]): any {
+    const [substituicaoTermo] = outros as [SubstituicaoTermo];
+
     return {
       type: MODIFICAR_PARTE_DE_DISPOSITIVO,
-      tipoDoDispositivo: this.tipoDoDispositivo,
-      elemento,
+      atual,
+      substituicaoTermo,
     };
   }
 }
 
-export const modificarTermoEmArtigo = new ModificarParteDeDispositivo(TipoDispositivo.artigo);
+export const modificarParteDeDispositivo = new ModificarParteDeDispositivoAction();

@@ -8,6 +8,7 @@ import { Numeracao } from './numeracao';
 import { Situacao } from './situacao';
 import { Tipo } from './tipo';
 import { Validacao } from './validacao';
+import { SubstituicaoTermo } from '../emenda/emenda';
 
 export interface Dispositivo extends Tipo, Hierarquia, Numeracao, Conteudo, BlocoAlteracao, Genero, Regras, Situacao, Validacao {
   tipo: string;
@@ -20,6 +21,7 @@ export interface Dispositivo extends Tipo, Hierarquia, Numeracao, Conteudo, Bloc
   motivosOperacaoNaoPermitida?: string[];
   bloqueado?: boolean;
   tituloDispositivo?: string;
+  substituicaoTermo?: SubstituicaoTermo;
 }
 
 export interface Articulacao extends Dispositivo {

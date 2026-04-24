@@ -9,6 +9,7 @@ import { CmdEmdCombinavel } from './cmd-emd-combinavel';
 import { CmdEmdModificacao } from './cmd-emd-modificacao';
 import { CmdEmdSupressao } from './cmd-emd-supressao';
 import { CmdEmdUtil } from './comando-emenda-util';
+import { CmdEmdSubstituicaoDeTermoEmDispositivo } from './cmd-emd-substituicao-termo-dispositivo';
 
 /**
  * Comando de emenda que trata supressão, modificação e adição de dispositivos do projeto.
@@ -42,9 +43,14 @@ export class CmdEmdDispPrj {
       comandos.push(new CmdEmdSupressao(dispositivosSuprimidos));
     }
 
-    const dispositivosModificados = dispositivos.filter(d => d.situacao.descricaoSituacao === DescricaoSituacao.DISPOSITIVO_MODIFICADO);
+    const dispositivosModificados = dispositivos.filter(d => d.situacao.descricaoSituacao === DescricaoSituacao.DISPOSITIVO_MODIFICADO && d.substituicaoTermo === undefined);
     if (dispositivosModificados.length) {
       comandos.push(new CmdEmdModificacao(dispositivosModificados));
+    }
+
+    const termosModificados = dispositivos.filter(d => d.situacao.descricaoSituacao === DescricaoSituacao.DISPOSITIVO_MODIFICADO && d.substituicaoTermo !== undefined);
+    if (termosModificados.length) {
+      comandos.push(...termosModificados.map(t => new CmdEmdSubstituicaoDeTermoEmDispositivo([t])));
     }
 
     const dispositivosAdicionados = dispositivos.filter(d => d.situacao.descricaoSituacao === DescricaoSituacao.DISPOSITIVO_ADICIONADO);
