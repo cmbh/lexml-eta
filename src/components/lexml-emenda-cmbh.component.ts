@@ -11,6 +11,7 @@ import { connect } from 'pwa-helpers';
 import { editorStyles } from '../assets/css/editor.css';
 import { quillSnowStyles } from '../assets/css/quill.snow.css';
 import { shoelaceLightThemeStyles } from '../assets/css/shoelace.theme.light.css';
+import { cmbhStyles } from '../assets/css/cmbh.css';
 
 import { adicionarAlerta } from '../model/alerta/acao/adicionarAlerta';
 import { removerAlerta } from '../model/alerta/acao/removerAlerta';
@@ -667,7 +668,7 @@ export class LexmlEmendaCmbhComponent extends connect(rootStore)(LitElement) {
 
   render(): TemplateResult {
     return html`
-      ${shoelaceLightThemeStyles} ${quillSnowStyles} ${editorStyles}
+      ${shoelaceLightThemeStyles} ${quillSnowStyles} ${editorStyles} ${cmbhStyles}
       <style>
         :root {
           --height: 100%;

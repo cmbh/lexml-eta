@@ -456,7 +456,11 @@ export class DemoView extends LitElement {
         </div>
       </div>
       <div class="nome-proposicao">${this.proposicaoCorrente.sigla ? `${this.proposicaoCorrente.sigla} ${this.proposicaoCorrente.numero}/${this.proposicaoCorrente.ano}` : ''}</div>
-      <lexml-emenda-cmbh .lexmlEmendaConfig=${this.emendaConfig} modo=${this.modo} @onrevisao=${this.onRevisao} @onchange=${() => console.log('chegou evento')}></lexml-emenda-cmbh>
+      <lexml-emenda-cmbh
+        .lexmlEmendaConfig=${this.emendaConfig}
+        modo=${this.modo}
+        @onrevisao=${this.onRevisao}
+      ></lexml-emenda-cmbh>
     `;
   }
 

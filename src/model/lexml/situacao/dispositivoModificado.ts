@@ -7,6 +7,7 @@ import { RemoverElemento } from '../acao/removerElementoAction';
 import { RenumerarElemento } from '../acao/renumerarElementoAction';
 import { restaurarElementoAction } from '../acao/restaurarElemento';
 import { TransformarElemento } from '../acao/transformarElementoAction';
+import { IniciarModificarParteDeDispositivoAction } from '../acao/iniciarModificarParteDeDispositivoAction';
 
 export class DispositivoModificado implements TipoSituacao {
   descricaoSituacao = DescricaoSituacao.DISPOSITIVO_MODIFICADO;
@@ -25,7 +26,8 @@ export class DispositivoModificado implements TipoSituacao {
       .filter((a: ElementoAction) => !(a instanceof RenumerarElemento))
       .filter((a: ElementoAction) => !a.descricao?.startsWith('Mover'))
       .filter((acao: ElementoAction): boolean => acao.descricao !== 'Adicionar' && acao.descricao !== 'Atualizar dispositivo')
-      .filter((a: ElementoAction) => !(a instanceof TransformarElemento));
+      .filter((a: ElementoAction) => !(a instanceof TransformarElemento))
+      .filter((a: ElementoAction) => !(a instanceof IniciarModificarParteDeDispositivoAction));
 
     acoesFiltradas.push(restaurarElementoAction);
 

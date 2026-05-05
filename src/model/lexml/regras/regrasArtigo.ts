@@ -32,6 +32,7 @@ import {
   transformarIncisoCaputEmParagrafo,
   transformarIncisoParagrafoEmParagrafo,
 } from '../acao/transformarElementoAction';
+import { iniciarModificarTermoEmArtigo } from '../acao/iniciarModificarParteDeDispositivoAction';
 import { hasIndicativoDesdobramento } from '../conteudo/conteudoUtil';
 import {
   getAgrupadorPosterior,
@@ -179,6 +180,8 @@ export function RegrasArtigo<TBase extends Constructor>(Base: TBase): any {
       if (dispositivo.isDispositivoAlteracao && !isTextoOmitido(dispositivo) && !isSuprimido(dispositivo) && (!isBloqueado(dispositivo) || existeFilhoDesbloqueado(dispositivo))) {
         acoes.push(adicionarTextoOmissisAction);
       }
+
+      acoes.push(iniciarModificarTermoEmArtigo);
 
       if (dispositivo.isDispositivoAlteracao && isTextoOmitido(dispositivo) && !isSuprimido(dispositivo) && (!isBloqueado(dispositivo) || existeFilhoDesbloqueado(dispositivo))) {
         acoes.push(removerTextoOmissisAction);
