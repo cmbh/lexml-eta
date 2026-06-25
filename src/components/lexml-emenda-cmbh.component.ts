@@ -610,7 +610,7 @@ export class LexmlEmendaCmbhComponent extends connect(rootStore)(LitElement) {
       }
     }
 
-    if (!this.isEmendaTextoLivre()) {
+    if (this.isEmendaPadrao()) {
       this.atualizarComandoEmenda(comandoEmenda);
     }
     this.requestUpdate();
