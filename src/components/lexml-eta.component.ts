@@ -9,7 +9,7 @@ import { ClassificacaoDocumento } from '../model/documento/classificacao';
 import { Anexo, ComandoEmenda, ModoEdicaoEmenda } from '../model/emenda/emenda';
 import { aplicarAlteracoesEmendaAction } from '../model/lexml/acao/aplicarAlteracoesEmenda';
 import { openArticulacaoAction } from '../model/lexml/acao/openArticulacaoAction';
-import { buildJsonixArticulacaoFromProjetoNorma } from '../model/lexml/documento/conversor/buildJsonixFromProjetoNorma';
+import { buildJsonixArticulacaoFromProjetoNorma, buildJsonixFromTexto } from '../model/lexml/documento/conversor/buildJsonixFromProjetoNorma';
 import { buildProjetoNormaFromJsonix } from '../model/lexml/documento/conversor/buildProjetoNormaFromJsonix';
 import { DOCUMENTO_PADRAO } from '../model/lexml/documento/modelo/documentoPadrao';
 import { DispositivoAdicionado } from '../model/lexml/situacao/dispositivoAdicionado';
@@ -20,6 +20,7 @@ import { LexmlEmendaConfig } from '../model/lexmlEmendaConfig';
 import { Revisao } from '../model/revisao/revisao';
 import { LexmlEmendaParametrosEdicao } from './lexml-emenda.component';
 import { EditorComponent } from './editor/editor.component';
+import { DescricaoSituacao } from '../model/dispositivo/situacao';
 
 @customElement('lexml-eta')
 export class LexmlEtaComponent extends connect(rootStore)(LitElement) {
@@ -74,8 +75,20 @@ export class LexmlEtaComponent extends connect(rootStore)(LitElement) {
 
   getProjetoAtualizado(): any {
     const out = { ...this.projetoNorma };
-    const articulacaoAtualizada = buildJsonixArticulacaoFromProjetoNorma(rootStore.getState().elementoReducer.articulacao);
-    (out as any).value.projetoNorma[(out as any).value.projetoNorma.norma ? 'norma' : 'projeto'].articulacao.lXhier = articulacaoAtualizada.lXhier;
+
+    const doc = (out as any).value.projetoNorma[(out as any).value.projetoNorma.norma ? 'norma' : 'projeto'];
+
+    const atualizacaoReducer = rootStore.getState().elementoReducer.articulacao;
+
+    const articulacaoAtualizada = buildJsonixArticulacaoFromProjetoNorma(atualizacaoReducer);
+    doc.articulacao.lXhier = articulacaoAtualizada.lXhier;
+
+    const situacaoEmenta = atualizacaoReducer?.projetoNorma?.ementa?.situacao;
+    const descricaoSituacao = situacaoEmenta.descricaoSituacao;
+    if (descricaoSituacao === DescricaoSituacao.DISPOSITIVO_MODIFICADO || descricaoSituacao === DescricaoSituacao.DISPOSITIVO_NOVO) {
+      doc.parteInicial.ementa.content = buildJsonixFromTexto(atualizacaoReducer?.projetoNorma?.ementa?.texto);
+    }
+
     return out;
   }
 

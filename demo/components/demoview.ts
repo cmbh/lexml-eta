@@ -283,6 +283,10 @@ export class DemoView extends LitElement {
     a.click();
   }
 
+  teste(): void {
+    console.log('testando2');
+  }
+
   abrir(): void {
     const fileUpload = document.getElementById('fileUpload');
     if (fileUpload !== null) {
@@ -422,6 +426,7 @@ export class DemoView extends LitElement {
           <input type="button" class="lexml-eta-btn--demo" title="Aplicação exemplo" value="Demo" />
         </div>
         <div class="lexml-eta-main-header--actions">
+          <input type="button" value="Teste" @click=${this.teste} />
           <input type="button" value="Salvar" @click=${this.salvar} />
           <input type="button" value="Abrir" @click=${this.abrir} />
           <input type="button" value="Usuário" @click=${this.usuario} />
@@ -456,11 +461,7 @@ export class DemoView extends LitElement {
         </div>
       </div>
       <div class="nome-proposicao">${this.proposicaoCorrente.sigla ? `${this.proposicaoCorrente.sigla} ${this.proposicaoCorrente.numero}/${this.proposicaoCorrente.ano}` : ''}</div>
-      <lexml-emenda-cmbh
-        .lexmlEmendaConfig=${this.emendaConfig}
-        modo=${this.modo}
-        @onrevisao=${this.onRevisao}
-      ></lexml-emenda-cmbh>
+      <lexml-emenda-cmbh .lexmlEmendaConfig=${this.emendaConfig} modo=${this.modo} @onrevisao=${this.onRevisao}></lexml-emenda-cmbh>
     `;
   }
 

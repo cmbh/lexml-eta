@@ -199,16 +199,20 @@ const buildDispositivo = (dispositivo: Dispositivo, value: any): void => {
 };
 
 const buildContent = (dispositivo: Dispositivo): any[] => {
+  return buildJsonixFromTexto(dispositivo.texto);
+};
+
+export const buildJsonixFromTexto = (texto: string): any[] => {
   const regex = /<a[^>]+href="(.*?)"[^>]*>(.*?)<\/a>/gi;
   const result: any[] = [];
 
-  const ocorrencias = dispositivo.texto.match(regex);
+  const ocorrencias = texto.match(regex);
 
   if (!ocorrencias) {
-    const fim = dispositivo.texto.indexOf('” (NR)');
-    result.push(dispositivo.texto.substring(0, fim === -1 ? undefined : fim));
-  } else if (!dispositivo.texto.startsWith(ocorrencias[0])) {
-    result.push(dispositivo.texto.substring(0, dispositivo.texto.indexOf(ocorrencias![0])));
+    const fim = texto.indexOf('” (NR)');
+    result.push(texto.substring(0, fim === -1 ? undefined : fim));
+  } else if (!texto.startsWith(ocorrencias[0])) {
+    result.push(texto.substring(0, texto.indexOf(ocorrencias![0])));
   }
 
   ocorrencias?.forEach((m, i) => {
@@ -216,12 +220,12 @@ const buildContent = (dispositivo: Dispositivo): any[] => {
 
     result.push(buildSpan(http ?? ''));
 
-    const from = dispositivo.texto?.indexOf(m) + m.length;
+    const from = texto?.indexOf(m) + m.length;
 
-    if (from < dispositivo.texto.length - 1) {
-      const to = ocorrencias[i + 1] ? dispositivo.texto.indexOf(ocorrencias[i + 1]) : dispositivo.texto.length;
+    if (from < texto.length - 1) {
+      const to = ocorrencias[i + 1] ? texto.indexOf(ocorrencias[i + 1]) : texto.length;
       result.push(
-        dispositivo.texto
+        texto
           .substring(from, to)
           ?.replace(/strong>/gi, 'b>')
           .replace(/em>/gi, 'i>')
