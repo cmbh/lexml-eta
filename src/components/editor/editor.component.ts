@@ -206,7 +206,7 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
         }
       </style>
       <div id="lx-eta-box">
-        <div id="lx-eta-barra-ferramenta">
+        <div id="lx-eta-barra-ferramenta" style="${this.readOnly ? 'display: none;' : ''}">
           <button type="button" class="ql-bold" title="Negrito (Ctrl+b)"></button>
           <button type="button" class="ql-italic" title="Itálico (Ctrl+i)"></button>
           <button type="button" class="ql-script" value="sub" title="Subscrito"></button>
@@ -947,7 +947,10 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
     const elementos: Elemento[] = event.elementos ?? [];
 
     for (let i = 1; i < elementos.length; i++) {
-      this.inserirNovoElementoNoQuill(elementos[i], elementos[i - 1], selecionarLinha);
+      const elemento = elementos[i];
+      this._atualizarAtributoEditavel(elemento);
+      const referencia = elementos[i - 1];
+      this.inserirNovoElementoNoQuill(elemento, referencia, selecionarLinha);
     }
   }
 
@@ -1148,7 +1151,7 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
       const elemento: Elemento = event.elementos ? event.elementos[0] : new Elemento();
       const acoesMenu: ElementoAction[] = (elemento?.acoesPossiveis ?? []).filter((acao: ElementoAction) => isAcaoMenu(acao));
 
-      if (acoesMenu.length > 0) {
+      if (acoesMenu.length > 0 && !this.readOnly) {
         const blotMenu: EtaBlotMenu = new EtaBlotMenu();
         const blotMenuConteudo: EtaBlotMenuConteudo = new EtaBlotMenuConteudo(this.quill.linhaAtual.containerDireito.alinhamentoMenu);
         const callback: any = (itemMenu: string) => {
@@ -1449,6 +1452,7 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
       if (!this.quill) return;
       this.quill.getLine(0)[0].remove();
       elementos.forEach((elemento: Elemento) => {
+        this._atualizarAtributoEditavel(elemento);
         if (
           (elemento.tipo === 'Articulacao' && !elemento.lexmlId) ||
           !paginacao?.paginaSelecionada ||
@@ -1479,8 +1483,18 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
     }, 0);
   }
 
+  private get readOnly(): boolean {
+    console.log(1, this.lexmlEtaConfig.habilitado);
+    return !this.lexmlEtaConfig.habilitado;
+  }
+
+  private _atualizarAtributoEditavel(elemento: Elemento) {
+    elemento.editavel = elemento.editavel && !this.readOnly;
+  }
+
   private configEditor(): QuillOptionsStatic {
     return {
+      readOnly: !this.readOnly,
       formats: ['bold', 'italic', 'link', 'script', 'EtaBlotConteudoOmissis'],
       modules: {
         toolbar: {
@@ -1792,7 +1806,7 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
         if (elemento.revisao && elemento.revisao.descricao === 'Dispositivo removido') {
           paragrafo.setAttribute('contenteditable', 'false');
         } else {
-          paragrafo.setAttribute('contenteditable', 'true');
+          paragrafo.setAttribute('contenteditable', (true && !this.readOnly).toString());
         }
       }
     });

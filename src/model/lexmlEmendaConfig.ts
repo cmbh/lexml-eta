@@ -5,4 +5,5 @@ export class LexmlEmendaConfig {
   tamanhoMaximoAnexo = 5120; //5MB
   tamanhoMaximoImagem = 2048; //2MB
   habilitarRevisao = true;
+  habilitado = true;
 }

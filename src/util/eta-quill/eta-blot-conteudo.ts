@@ -35,7 +35,6 @@ export class EtaBlotConteudo extends EtaBlot {
     } else {
       node.innerHTML = conteudo !== '' ? conteudo : '<br>';
     }
-
     return node;
   }
 
