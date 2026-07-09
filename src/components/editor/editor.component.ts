@@ -1484,7 +1484,6 @@ export class EditorComponent extends connect(rootStore)(LitElement) {
   }
 
   private get readOnly(): boolean {
-    console.log(1, this.lexmlEtaConfig.habilitado);
     return !this.lexmlEtaConfig.habilitado;
   }
 
