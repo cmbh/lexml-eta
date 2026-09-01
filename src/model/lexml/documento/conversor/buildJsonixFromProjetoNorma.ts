@@ -222,7 +222,7 @@ export const buildJsonixFromTexto = (texto: string): any[] => {
 
     const from = texto?.indexOf(m) + m.length;
 
-    if (from < texto.length - 1) {
+    if (from < texto.length) {
       const to = ocorrencias[i + 1] ? texto.indexOf(ocorrencias[i + 1]) : texto.length;
       result.push(
         texto
